@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Reservation System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>🏨 Hotel Reservation System</h1>
+    </header>
+
+    <section class="form-section">
+      <h2>Book a Room</h2>
+      <form>
+        <label>Customer Name:</label>
+        <input type="text" placeholder="Enter full name" required />
+
+        <label>Room Number:</label>
+        <input type="number" placeholder="e.g. 101" required />
+
+        <label>Days of Stay:</label>
+        <input type="number" placeholder="e.g. 3" required />
+
+        <label>Cost Per Day (₹):</label>
+        <input type="number" placeholder="e.g. 1500" required />
+
+        <button type="submit">Reserve Now</button>
+      </form>
+    </section>
+
+    <section class="reservation-list">
+      <h2>Existing Reservations</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Room No</th>
+          <th>Days</th>
+          <th>Total Cost</th>
+        </tr>
+        <tr>
+          <td>Ravi Kumar</td>
+          <td>102</td>
+          <td>2</td>
+          <td>₹3000</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </table>
+    </section>
+  </div>
+
+</body>
+</html>

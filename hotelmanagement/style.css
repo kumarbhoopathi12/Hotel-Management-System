@@ -1,0 +1,215 @@
+/* style.css */
+
+/* Import Google Fonts for better aesthetics */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto&display=swap');
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set base font and background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Container styling */
+.container {
+  background: #fff;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+header {
+  background: url('https://images.unsplash.com/photo-1501117716987-c8f56e9fa43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80') no-repeat center/cover;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+header h1 {
+  position: relative;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Form Section */
+.form-section {
+  padding: 30px 40px;
+  background-color: #fafafa;
+  border-bottom: 2px solid #667eea;
+}
+
+.form-section h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #4a4a4a;
+  margin-bottom: 25px;
+  border-left: 6px solid #764ba2;
+  padding-left: 12px;
+}
+
+/* Styling the form */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+
+/* Labels */
+form label {
+  grid-column: span 2;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+form input {
+  grid-column: span 2;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.7);
+}
+
+/* Make number inputs smaller width */
+form input[type="number"] {
+  max-width: 180px;
+}
+
+/* Button styling */
+form button {
+  grid-column: span 2;
+  padding: 15px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.35s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(118, 75, 162, 0.6);
+}
+
+/* Reservation List Section */
+.reservation-list {
+  padding: 30px 40px 40px 40px;
+  background: #fff;
+}
+
+.reservation-list h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  border-left: 6px solid #667eea;
+  padding-left: 12px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 1rem;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #667eea;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e0d7ff;
+  transition: background 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 720px) {
+  /* Stack form inputs vertically on small screens */
+  form {
+    grid-template-columns: 1fr;
+  }
+  form label,
+  form input,
+  form button {
+    grid-column: span 1;
+  }
+  /* Header font smaller */
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 20px 10px;
+  }
+  .container {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  }
+  .form-section, .reservation-list {
+    padding: 20px 25px;
+  }
+  header {
+    padding: 25px 15px;
+  }
+}
